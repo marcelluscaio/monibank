@@ -6,8 +6,8 @@ export default function validaIdade(campo) {
 }
 
 function verificaIdade(data) {
+    const dataAniversario18Anos = new Date(data.getUTCFullYear() + 18, data.getUTCMonth(), data.getUTCDate());
     const dataAtual = new Date();
-    const dataMais18 = new Date(data.getUTCFullYear() + 18, data.getUTCMonth(), data.getUTCDate());
 
-    return dataAtual >= dataMais18;
+    return dataAtual >= dataAniversario18Anos;
 }
